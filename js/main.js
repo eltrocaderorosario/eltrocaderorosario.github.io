@@ -1,6 +1,6 @@
 var obj;
 var auth_data;
-fetch('http://181.164.68.57:5000/data')
+fetch('https://181.164.68.57:5000/data')
   .then(response => response.json())
   .then(data => obj = data)
   .then(obj => set_body_data(obj))
@@ -10,7 +10,7 @@ function set_body_data(obj) {
 }
 
 function auth(username, password) {
-  fetch(`http://181.164.68.57:5000/auth/${username}/${password}`)
+  fetch(`https://181.164.68.57:5000/auth/${username}/${password}`)
   .then(response => response.json())
   .then(data => auth_data = data)
   .then(auth_data =>{ if (auth_data.authIsOk = true) {
