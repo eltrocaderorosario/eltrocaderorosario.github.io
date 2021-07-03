@@ -1,6 +1,6 @@
 var obj;
 var auth_data;
-fetch('http://localhost:5000/data')
+fetch('http://181.164.68.57:5000/data')
   .then(response => response.json())
   .then(data => obj = data)
   .then(obj => set_body_data(obj))
